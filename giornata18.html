@@ -7,12 +7,43 @@
     <link rel="stylesheet" href="styles_pagine.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+
+<script>
+function updateTime() {
+    const now = new Date();
+
+    // Giorno, mese e anno
+    const days = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const months = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+
+    const dayName = days[now.getDay()];
+    const day = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    // Ore, minuti, secondi
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // Aggiorna il testo
+    document.getElementById('live-time').textContent = 
+        `TELEVIDEO ${dayName} ${day} ${month} ${hours}:${minutes}:${seconds}`;
+}
+
+// Aggiorna ogni secondo
+setInterval(updateTime, 1000);
+
+// Avvia subito
+updateTime();
+</script>
+
 <body>
     <header>
         <p class="left-text">
             <a href="index.html" style="color: #03FF00; text-decoration: underline;">&#8592; TORNA ALLA HOMEPAGE</a>
         </p>
-        <p class="right-text">TELEVIDEO Ma 02 Set 22:36:05</p>
+        <p class="right-text" id="live-time">TELEVIDEO</p>
     </header>
     
     <main>

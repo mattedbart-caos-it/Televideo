@@ -7,11 +7,42 @@
     <link rel="stylesheet" href="style_homepage.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+
+<script>
+function updateTime() {
+    const now = new Date();
+
+    // Giorno, mese e anno
+    const days = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const months = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+
+    const dayName = days[now.getDay()];
+    const day = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    // Ore, minuti, secondi
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // Aggiorna il testo
+    document.getElementById('live-time').textContent = 
+        `TELEVIDEO ${dayName} ${day} ${month} ${hours}:${minutes}:${seconds}`;
+}
+
+// Aggiorna ogni secondo
+setInterval(updateTime, 1000);
+
+// Avvia subito
+updateTime();
+</script>
+
 <body>
     <header>
         <div class="top-header-container">
             <p class="left-text">206.00</p>
-            <p class="right-text">TELEVIDEO Ma 02 Set 22:36:00</p>
+            <p class="right-text" id="live-time">TELEVIDEO</p>
         </div>
 
         <div class="header-container">
@@ -40,7 +71,7 @@
                 </div>
         
                 <div class="flash-news">
-                    <p>(ANSA) - ROMA, 02 SET - Ricomincia ufficialmente la stagione 2025/26 dell Ahiax! Appuntamento a 'La Mirage Stadium' per il primo allenamento congiunto della stagione, che vedra' la collaborazione speciale dei paramedici del 118.</p>
+                    <p>(ANSA) - TEL AVIV, 27 MAR - La Lazio vince la Coppa Italia battendo la Roma 3-1 in una finale emozionante. Dopo un primo tempo equilibrato, la Lazio passa in vantaggio con un gol di Immobile, ma la Roma pareggia con Pellegrini. Tuttavia, la Lazio si impone con una rete di Milinković-Savić e un gol di Felipe Anderson all'89'. Questo successo segna la fine di un digiuno di trofei di 10 anni per la Lazio. Il presidente Lotito ha celebrato la vittoria come l'inizio di una nuova era per il club.</p>
                 </div>
             </div>
 
@@ -52,7 +83,7 @@
                 <div class="name-container">
                     <p>
                         <a href="giornata18.html" class="text-1">
-                            <span class="arrow">&#8594;</span> 1' GIORNATA
+                            <span class="arrow">&#8594;</span> 26' GIORNATA
                         </a>
                     </p>
                     <p><span class="arrow"></span></p>
@@ -64,10 +95,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
