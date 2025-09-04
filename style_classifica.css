@@ -31,8 +31,7 @@ header {
 
 .left-text {
     color: #03FF00;
-    font-size: 20px;
-    margin: 0;
+    font-size: 1.2rem;
 }
 
 .left-text:hover {
@@ -40,14 +39,13 @@ header {
 }
 
 .right-text {
-    font-size: 20px;
-    margin: 0;
+    font-size: 1.2rem;
 }
 
 .top-header-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px;
 }
 
 .blue-section {
@@ -55,24 +53,11 @@ header {
     color: white;
     display: flex;
     align-items: center;
-    padding-top: 12px;
     justify-content: center;
-    font-size: 120px;
+    width: 100%;
+    font-size: 12vw; /* scala con la larghezza */
     font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .blue-section {
-        font-size: 80px;
-    }
-
-    td:first-child {
-        font-size: 22px;
-    }
-
-    td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(7) {
-        font-size: 22px;
-    }
+    padding: 12px 0;
 }
 
 table {
@@ -85,13 +70,15 @@ table {
     padding: 10px;
     text-align: center;
     color: blue;
-    font-size: 25px;
+    font-size: 2vw; /* scala con la larghezza */
 }
 
 td {
     padding: 10px;
     text-align: left;
-    font-size: 25px;
+    font-size: 2vw; /* scala con la larghezza */
+    word-wrap: break-word;
+    min-width: 0;
 }
 
 td:first-child {
@@ -101,4 +88,20 @@ td:first-child {
 td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6), td:nth-child(7) {
     text-align: center;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .top-header-container {
+        padding: 10px 15px;
+    }
+
+    .blue-section {
+        font-size: 10vw;
+        padding: 8px 0;
+    }
+
+    td, .green-box {
+        font-size: 4vw;
+        padding: 5px;
+    }
 }
