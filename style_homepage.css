@@ -33,6 +33,7 @@ header {
     color: #03FF00;
     font-size: 20px;
     margin: 0;
+    text-align: right;
 }
 
 .right-text {
@@ -59,7 +60,7 @@ header {
     align-items: center;
     padding-top: 12px;
     justify-content: center;
-    font-size: 120px;
+    font-size: clamp(100px, 10vw, 120px);
     font-weight: bold;
 }
 
@@ -107,7 +108,6 @@ header {
     .header-container {
         flex-direction: column;
     }
-
     .blue-section,
     .yellow-section {
         width: 100%;
@@ -241,8 +241,3 @@ main {
         font-size: 24px;
     }
 }
-
-
-
-
-
