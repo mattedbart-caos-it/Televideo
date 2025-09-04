@@ -39,6 +39,7 @@ header {
 .right-text {
     font-size: 20px;
     margin: 0;
+    text-align: right;
 }
 
 .top-header-container {
@@ -60,7 +61,7 @@ header {
     align-items: center;
     padding-top: 12px;
     justify-content: center;
-    font-size: clamp(100px, 10vw, 120px);
+    font-size: clamp(80px, 8vw, 120px);
     font-weight: bold;
 }
 
