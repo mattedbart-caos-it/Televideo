@@ -120,6 +120,11 @@ header {
   height: auto;
 }
 
+.giornata-link {
+    text-decoration: none;
+    color: inherit;
+}
 
-
-
+.giornata-link:hover {
+    text-decoration: underline;
+}
