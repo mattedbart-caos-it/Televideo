@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'PerfectDOSVGA';
+    src: url('fonts/Perfect DOS VGA 437.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'PerfectDOSVGA', monospace;
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.left-text {
+    color: #03FF00;
+    font-size: 20px;
+    margin: 0;
+}
+
+.right-text {
+    font-size: 20px;
+    margin: 0;
+}
+
+.top-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 20px 40px;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+}
+
+.blue-section {
+    width: 70%;
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    justify-content: center;
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.yellow-section {
+    width: 30%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 25px;
+    padding-right: 15px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.yellow-section p {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    margin-right: 40px;
+}
+
+.yellow-section span.number {
+    color: red;
+    font-weight: bold;
+}
+
+.yellow-section span.text {
+    color: blue;
+    font-weight: bold;
+}
+
+.yellow-section a.text {
+    text-decoration: none;
+}
+
+.yellow-section a.text:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .blue-section,
+    .yellow-section {
+        width: 100%;
+    }
+}
+
+main {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-image img {
+    width: 80%;
+    height: auto;
+    margin-left: 90px;
+}
+
+.info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flash-news {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.flash-news p {
+  text-align: justify;
+}
+
+.regolamento-container {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.blue-box {
+    background-color: #00BFFF;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.name-container p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.name-container a.text-1 {
+    text-decoration: none;
+    color: white;
+}
+
+.name-container a.text-1:hover {
+    text-decoration: underline;
+}
+
+.arrow {
+    color: #03FF00;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .main-image, .info-container {
+        width: 90%; 
+        margin-bottom: 20px; 
+    }
+
+    .main-image {
+        order: 2;
+        width: auto;
+        height: auto;
+        margin-right: 80px;
+    }
+
+    .info-container {
+        order: 1;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .blue-box, .name-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .name-container p {
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    .flash-news {
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+}
+
+
+
+
+
