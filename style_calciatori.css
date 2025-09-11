@@ -67,33 +67,39 @@ h1 {
   background-color: #00CFFF;
 }
 
-.stat {
-  font-size: 18px;
-  margin: 10px 0px;
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .stat.verticale {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .stat.verticale img {
-  width: 50px;
-  height: 50px;
-  margin: 20px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 .stat.verticale .label {
-  font-weight: bold;
-  font-size: 28px;
-  margin-bottom: 5px;
-  color: #03FF00;
-
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #03FF00;
 }
 
 .stat.verticale .numero {
-  font-size: 32px;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
 }
+
+
