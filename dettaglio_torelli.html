@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D. Torelli</title>
+    <link rel="stylesheet" href="style_calciatori.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<script>
+function updateTime() {
+    const now = new Date();
+
+    // Giorno, mese e anno
+    const days = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const months = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+
+    const dayName = days[now.getDay()];
+    const day = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    // Ore, minuti, secondi
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // Aggiorna il testo
+    document.getElementById('live-time').textContent = 
+        `TELEVIDEO ${dayName} ${day} ${month} ${hours}:${minutes}:${seconds}`;
+}
+
+// Aggiorna ogni secondo
+setInterval(updateTime, 1000);
+
+// Avvia subito
+updateTime();
+</script>
+
+<body>
+  <div class="container">
+    <h1>Davide Torelli</h1>
+    <div class="sigle">
+        <span class="cerchio verde">Dc</span>
+        <span class="cerchio celeste">E</span>
+    </div>
+    <img src="images/torelli.jpg" alt="Foto Toro">
+    
+    <div class="stat verticale">
+        <img src="images/presenze.png" alt="Icona Gol">
+        <div class="label">Presenze</div>
+        <div class="numero">2</div>
+    </div>
+    
+    <div class="stat verticale">
+        <img src="images/soccerball.png" alt="Icona Gol">
+        <div class="label">Gol</div>
+        <div class="numero">2</div>
+    </div>
+    
+    <div class="stat verticale">
+        <img src="images/yellowcard.png" alt="Icona Gol">
+        <div class="label">Ammonizioni</div>
+        <div class="numero">0</div>
+    </div>
+  
+  </div>
+</body>
+
+</html>

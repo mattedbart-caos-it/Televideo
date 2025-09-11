@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'PerfectDOSVGA';
+    src: url('fonts/Perfect DOS VGA 437.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'PerfectDOSVGA', monospace;
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.left-text {
+    color: #03FF00;
+    font-size: 20px;
+    margin: 0;
+}
+
+.left-text:hover {
+    text-decoration: underline;
+}
+
+.right-text {
+    font-size: 20px;
+    margin: 0;
+    text-align: right;
+}
+
+.top-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 20px 40px;
+}
+
+.blue-section {
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    justify-content: center;
+    font-size: 120px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .blue-section {
+        font-size: 10vw;
+    }
+
+    td:first-child {
+        font-size: 5vw;
+    }
+
+    td:nth-child(2), td:nth-child(3) {
+        font-size: 5vw;
+    }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.green-box {
+  background-color: #03FF00;
+  padding: 10px;
+  text-align: left;
+  color: blue;
+  font-size: clamp(14px, 2.5vw, 22px);
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  font-size: clamp(14px, 2.5vw, 22px);
+}
+
+td:first-child {
+    padding-left: 30px;
+}
+
+td:nth-child(2), td:nth-child(3) {
+  padding: 10px;
+}
+
+
+th:nth-child(1), td:nth-child(1) { width: 50%; }
+th:nth-child(2), td:nth-child(2) { width: 40%; }
+th:nth-child(3), td:nth-child(3) { width: 30%; }
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFERMERIA</title>
+    <link rel="stylesheet" href="style_infermeria.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<script>
+function updateTime() {
+    const now = new Date();
+
+    // Giorno, mese e anno
+    const days = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const months = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+
+    const dayName = days[now.getDay()];
+    const day = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    // Ore, minuti, secondi
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // Aggiorna il testo
+    document.getElementById('live-time').textContent = 
+        `TELEVIDEO ${dayName} ${day} ${month} ${hours}:${minutes}:${seconds}`;
+}
+
+// Aggiorna ogni secondo
+setInterval(updateTime, 1000);
+
+// Avvia subito
+updateTime();
+</script>
+
+<body>
+    <header>
+        <div class="top-header-container">
+            <p class="left-text">
+                <a href="index.html" style="color: #03FF00; text-decoration: underline;">&#8592; TORNA ALLA HOMEPAGE</a>
+            </p>
+            <p class="right-text" id="live-time">TELEVIDEO</p>
+        </div>
+    </header>
+
+    <div class="blue-section" style="width: 100%;">INFERMERIA</div>
+
+    <table class="classifica">
+            <tr>
+                <th class="green-box"></th>
+                <th class="green-box">Quesito</th>
+                <th class="green-box">Prognosi</th>
+            </tr>
+            
+            <tr>
+                <td>Linguanti L.</td>
+                <td>Frattura composta articolare III distale radio sn</td>
+                <td>30 gg</td>
+            </tr>
+    </table>
+
+</body>
+</html>
