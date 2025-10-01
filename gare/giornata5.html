@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELEVIDEO - 5' GIORNATA</title>
+    <link rel="stylesheet" href="../styles_pagine.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<script>
+function updateTime() {
+    const now = new Date();
+
+    // Giorno, mese e anno
+    const days = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const months = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+
+    const dayName = days[now.getDay()];
+    const day = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    // Ore, minuti, secondi
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // Aggiorna il testo
+    document.getElementById('live-time').textContent = 
+        `TELEVIDEO ${dayName} ${day} ${month} ${hours}:${minutes}:${seconds}`;
+}
+
+// Aggiorna ogni secondo
+setInterval(updateTime, 1000);
+
+// Avvia subito
+updateTime();
+</script>
+
+<body>
+    <header>
+        <p class="left-text">
+            <a href="../index.html" style="color: #03FF00; text-decoration: underline;">&#8592; TORNA ALLA HOMEPAGE</a>
+        </p>
+        <p class="right-text" id="live-time">TELEVIDEO</p>
+    </header>
+    
+    <main>
+        <section class="container left-container">
+            <div class="box">
+            <span class="text">NERI</span>
+            <span class="text">3</span>
+            </div>
+            <ul class="name-list">
+                <li><span class="number">22'</span><span class="name">Torelli</span></li>
+                <li><span class="number">14' 51'</span><span class="name">Monterosso</span></li>
+            </ul>
+        </section>
+        
+        <section class="container right-container">
+            <div class="box">
+            <span class="text">BIANCHI</span>
+            <span class="text">7</span>
+            </div>
+            <ul class="name-list">
+                <li><span class="number">4' 17'</span><span class="name">Fanto' N.</span></li>
+                <li><span class="number">8' 55'</span><span class="name">Caldiero</span></li>
+                <li><span class="number">29' 36'</span><span class="name">Gaudioso</span></li>
+                <li><span class="number">42'</span><span class="name">Cortellessa</span></li>
+            </ul>
+        </section>
+        
+        <section class="full-width-container">
+            <div class="info-box">Formazioni</div>
+            <div class="info-box">Ammoniti</div>
+            <div class="info-box">Espulsi</div>
+        </section>
+
+        <section class="two-columns-container">
+            <div class="list-container">
+                <ul>
+                    <li>Torelli (<span style="font-weight: bold; color: #FFD700;">C</span>)</li>
+                    <li>Buono</li>
+                    <li>Ramacci</li>
+                    <li>Fanto' M.</li>
+                    <li>Monterosso</li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <ul>
+                    <li>Cortellessa</li>
+                    <li>De Bartolomeo (<span style="font-weight: bold; color: #FFD700;">C</span>)</li>
+                    <li>Caldiero</li>
+                    <li>Gaudioso</li>
+                    <li>Fanto' N.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="footer-box"><span style="color: #03FF00;">Campo:</span> La Mirage Sporting Club</div>
+    </footer>
+
+</body>
+</html>
