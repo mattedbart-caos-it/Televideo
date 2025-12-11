@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELEVIDEO - 15' GIORNATA</title>
+    <link rel="stylesheet" href="../styles_pagine.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<script>
+function updateTime() {
+    const now = new Date();
+
+    // Giorno, mese e anno
+    const days = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const months = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+
+    const dayName = days[now.getDay()];
+    const day = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    // Ore, minuti, secondi
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // Aggiorna il testo
+    document.getElementById('live-time').textContent = 
+        `TELEVIDEO ${dayName} ${day} ${month} ${hours}:${minutes}:${seconds}`;
+}
+
+// Aggiorna ogni secondo
+setInterval(updateTime, 1000);
+
+// Avvia subito
+updateTime();
+</script>
+
+<body>
+    <header>
+        <p class="left-text">
+            <a href="../index.html" style="color: #03FF00; text-decoration: underline;">&#8592; TORNA ALLA HOMEPAGE</a>
+        </p>
+        <p class="right-text" id="live-time">TELEVIDEO</p>
+    </header>
+    
+    <main>
+        <section class="container left-container">
+            <div class="box">
+            <span class="text">NERI</span>
+            <span class="text">5</span>
+            </div>
+            <ul class="name-list">
+                <li><span class="number">41', 59'</span><span class="name">Fanto' N.</span></li>
+                <li><span class="number">47'</span><span class="name">Torelli</span></li>
+                <li><span class="number">3'</span><span class="name">Calabrese</span></li>
+                <li><span class="number">26'</span><span class="name">Caldiero</span></li>
+
+            </ul>
+        </section>
+        
+        <section class="container right-container">
+            <div class="box">
+            <span class="text">BIANCHI</span>
+            <span class="text">5</span>
+            </div>
+            <ul class="name-list">
+                <li><span class="number">7', 29'</span><span class="name">Tenace</span></li>
+                <li><span class="number">34', 48'</span><span class="name">Fraschetti</span></li>
+                <li><span class="number">53'</span><span class="name">Turi</span></li>
+            </ul>
+        </section>
+        
+        <section class="full-width-container">
+            <div class="info-box">Formazioni</div>
+            <div class="info-box">Ammoniti</div>
+            <div class="info-box">Espulsi</div>
+        </section>
+
+        <section class="two-columns-container">
+            <div class="list-container">
+                <ul>
+                    <li>Torelli (<span style="font-weight: bold; color: #FFD700;">C</span>)</li>
+                    <li>Cortellessa</li>
+                    <li>Calabrese</li>
+                    <li>Caldiero</li>
+                    <li>Fanto' N.</li>
+                    <li>Pestrin</li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <ul>
+                    <li>De Bartolomeo (<span style="font-weight: bold; color: #FFD700;">C</span>)</li>
+                    <li>Buono</li>
+                    <li>Tenace</li>
+                    <li>Fraschetti</li>
+                    <li>Turi</li>
+                    <li>Fanto' M.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="centered-text">
+            <p>🟨 Nel corso della partita il direttore di gara ha ammonito, al 30', il calciatore Buono M. per reiterate condotte antisportive, consistenti in tentativi non consentiti di neutralizzare gli avversari sia sul piano fisico sia su quello spirituale. Successivamente, al 60', e' stato sanzionato con il DASPO il calciatore Fanto' M. per aver scambiato il calciatore McTominay con Barella, comportamento ritenuto in contrasto con i principi di correttezza e di quieto vivere.</p>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="footer-box"><span style="color: #03FF00;">Campo:</span> La Mirage Sporting Club</div>
+    </footer>
+
+</body>
+</html>
