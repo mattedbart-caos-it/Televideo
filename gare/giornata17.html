@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELEVIDEO - 17' GIORNATA</title>
+    <link rel="stylesheet" href="../styles_pagine.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<script>
+function updateTime() {
+    const now = new Date();
+
+    // Giorno, mese e anno
+    const days = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+    const months = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+
+    const dayName = days[now.getDay()];
+    const day = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    // Ore, minuti, secondi
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // Aggiorna il testo
+    document.getElementById('live-time').textContent = 
+        `TELEVIDEO ${dayName} ${day} ${month} ${hours}:${minutes}:${seconds}`;
+}
+
+// Aggiorna ogni secondo
+setInterval(updateTime, 1000);
+
+// Avvia subito
+updateTime();
+</script>
+
+<body>
+    <header>
+        <p class="left-text">
+            <a href="../index.html" style="color: #03FF00; text-decoration: underline;">&#8592; TORNA ALLA HOMEPAGE</a>
+        </p>
+        <p class="right-text" id="live-time">TELEVIDEO</p>
+    </header>
+    
+    <main>
+        <section class="container left-container">
+            <div class="box">
+            <span class="text">NERI</span>
+            <span class="text">6</span>
+            </div>
+            <ul class="name-list">
+                <li><span class="number">5', 48'</span><span class="name">Torelli</span></li>
+                <li><span class="number">22', 38'</span><span class="name">Cortellessa</span></li>
+                <li><span class="number">32', 47'</span><span class="name">Buono</span></li>
+
+            </ul>
+        </section>
+        
+        <section class="container right-container">
+            <div class="box">
+            <span class="text">BIANCHI</span>
+            <span class="text">2</span>
+            </div>
+            <ul class="name-list">
+                <li><span class="number">21', 56'</span><span class="name">Turi</span></li>
+            </ul>
+        </section>
+        
+        <section class="full-width-container">
+            <div class="info-box">Formazioni</div>
+            <div class="info-box">Ammoniti</div>
+            <div class="info-box">Espulsi</div>
+        </section>
+
+        <section class="two-columns-container">
+            <div class="list-container">
+                <ul>
+                    <li>Torelli (<span style="font-weight: bold; color: #FFD700;">C</span>)</li>
+                    <li>Cortellessa</li>
+                    <li>Tenace</li>
+                    <li><span style="color: yellow;">Buono</span></li>
+                    <li>Pestrin</li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <ul>
+                    <li>De Bartolomeo (<span style="font-weight: bold; color: #FFD700;">C</span>)</li>
+                    <li>Ramacci</li>
+                    <li>Turi</li>
+                    <li>Renatinho</li>
+                    <li>Fanto' M.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="centered-text">
+            <p>🟨 Al 43', il direttore di gara e' intervenuto sanzionando il tesserato della formazione in maglia nera Buono M. per un duro contrasto in scivolata a piede a falce e martello contro Renatinho. </p>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="footer-box"><span style="color: #03FF00;">Campo:</span> La Mirage Sporting Club</div>
+    </footer>
+
+</body>
+</html>
